@@ -76,7 +76,7 @@ include_once "./config/config.php";
             $telefone = $_POST['telefone1'];
 
             $user->atualizar($id, $nome, $email, $telefone);
-            
+
         }
     }
 
