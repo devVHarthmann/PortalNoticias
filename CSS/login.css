@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: rgb(58, 55, 55);
+}
+
+:root {
+    --gBlack: #14212e;
+    --whiteF: #FAF0F0;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--whiteF);
+}
+.sideSolid{
+    width: 40vw;
+    height: 100vh;
+    background-color:  #1e1b4b;;
+}
+.formContainer{
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formLogin{
+    width: 42%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4d4d4;
+    border-radius: 20px;
+    gap: 20px;
+}
+input{
+    width: 70%;
+    height: 8%;
+    border: 2px solid rgba(54, 43, 43, 0.568);
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    transition: 0.2s ease-in-out;
+}
+input:focus-within{
+    outline: none;
+    border: #14212e 2px solid;
+}
+.submitLog{
+    width: 30%;
+    height: 10%;
+    border-radius: 30px;
+    border: none;
+    background-color: #1e1b4b;
+}

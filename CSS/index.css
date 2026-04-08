@@ -17,6 +17,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .hd1 {
@@ -59,17 +60,28 @@ li ul {
 }
 
 /* Noticias */
+.contMain {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    padding-top: 20px;
+}
 
 .containerNoticias {
     width: 100%;
+    flex: 1;
+    /* ocupa o espaço restante da coluna */
     height: auto;
-    min-height: 100%;
+    overflow-y: auto;
     display: flex;
     gap: 30px;
     padding: 30px;
     flex-wrap: wrap;
     justify-content: center;
-
+    align-content: flex-start;
+    /* cards começam do topo, não centralizam verticalmente */
 }
 
 #noticia {
@@ -93,22 +105,68 @@ li ul {
     background-repeat: no-repeat;
     transition: 0.3s ease-in-out;
 }
-#logo:hover{
+
+#logo:hover {
     transform: scale(1.05);
 }
-.contMain{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-#tit1{
+
+#tit1 {
     width: 90%;
     font-size: 26pt;
     margin-left: 5.3vw;
     margin-bottom: 1vw;
 }
-#hrT{
+
+#hrT {
     border-top: 1px solid rgba(128, 128, 128, 0.247);
     width: 80vw;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1b4b;
+    /* indigo-950 */
+    width: 12rem;
+    flex-shrink: 0;
+    min-height: 100vh;
+    box-shadow: 0 10px 15px rgba(43, 42, 42, 0.4);
+    gap: 10px;
+}
+
+.containerNoticias::-webkit-scrollbar {
+    width: 6px;
+}
+
+.containerNoticias::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+.containerNoticias::-webkit-scrollbar-thumb {
+    background: #c0c0c0;
+}
+
+.containerNoticias::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0;
+}
+
+.btn {
+    width: 50%;
+    height: 40px;
+    background-color: var(--whiteF);
+    border-radius: 30px;
+    transition: 0.3s ease-in-out;
+     box-shadow: 0 10px 15px rgba(146, 139, 139, 0.048)
+}
+
+.btn:hover {
+    transform: scale(1.03);
+}
+#frmRedirect{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
