@@ -19,7 +19,7 @@ class Noticia
 
     public function ler()
     {
-        $query = "SELECT * FROM " . $this->table_name;
+        $query = "SELECT * FROM " . $this->table_name . " ORDER BY data DESC";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt;
