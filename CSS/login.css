@@ -5,60 +5,78 @@
     margin: 0;
     box-sizing: border-box;
     color: rgb(58, 55, 55);
+    font-family: "Lato", sans-serif;
 }
 
 :root {
     --gBlack: #14212e;
     --whiteF: #FAF0F0;
 }
-main{
+
+main {
     display: flex;
     flex-direction: row;
     width: 100vw;
     height: 100vh;
     background-color: var(--whiteF);
 }
-.sideSolid{
-    width: 40vw;
+
+.sideSolid {
+    width: 50vw;
     height: 100vh;
-    background-color:  #1e1b4b;;
+    background-color: #1e1b4b;
+    ;
 }
-.formContainer{
-    width: 60vw;
+
+.formContainer {
+    width: 50vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.formLogin{
-    width: 42%;
+.formLogin {
+    width: 52%;
     height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #d4d4d4;
-    border-radius: 20px;
-    gap: 20px;
+    gap: 10px;
+    border-radius: 5px;
+    
 }
-input{
-    width: 70%;
+
+input {
+    width: 80%;
     height: 8%;
-    border: 2px solid rgba(54, 43, 43, 0.568);
-    border-radius: 10px;
+    border: none;
     background-color: #f4f4f4;
     padding: 10px;
-    transition: 0.2s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
-input:focus-within{
+
+input:focus-within {
     outline: none;
-    border: #14212e 2px solid;
+    background-color: #dddddd;
 }
-.submitLog{
-    width: 30%;
+
+.submitLog {
+    width: 80%;
     height: 10%;
-    border-radius: 30px;
     border: none;
     background-color: #1e1b4b;
+    font-size: large;
+    color: #d4d4d4;
+    margin-top: 10px;
+}
+
+label {
+    width: 80%;
+    text-align: start;
+}
+form h1{
+    margin-bottom: 10px;
 }

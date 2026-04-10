@@ -155,9 +155,9 @@ li ul {
     width: 50%;
     height: 40px;
     background-color: var(--whiteF);
-    border-radius: 30px;
+    border-radius: 10px;
     transition: 0.3s ease-in-out;
-     box-shadow: 0 10px 15px rgba(146, 139, 139, 0.048)
+    box-shadow: 0 10px 15px rgba(146, 139, 139, 0.048)
 }
 
 .btn:hover {

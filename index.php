@@ -2,7 +2,8 @@
 include_once "./classes/Usuario.php";
 include_once "./classes/Noticia.php";
 include_once "./config/config.php";
-
+session_start();
+$logado = isset($_SESSION['usuario_id']);
 ?>
 
 <!DOCTYPE html>
@@ -21,12 +22,28 @@ include_once "./config/config.php";
     <main class="mn1">
         <aside id="sidebar">
             <div id="logo"></div>
-            <button class="btn"><a href="login.php">Login</a></button>
-            <button class="btn"><a  href="cadastrar.php">Cadastrar</a></button>
+            <?php if (!$logado): ?>
+                <button class="btn"><a href="login.php">Login</a></button>
+                <button class="btn"><a href="cadastrar.php">Cadastrar</a></button>
+            <?php else: ?>
+                <button class="btn" type="submit"><a href="logout.php">Logout</a></button>
+            <?php endif; ?>
+
+
         </aside>
 
         <div class="contMain">
-            <span id="tit1">Notícias</span>
+            <?php if (!$logado): ?>
+                <span id="tit1">Notícias</span>
+            <?php else:
+                $usuario = new Usuario($db);
+                $dados = $usuario->lerPorId($_SESSION['usuario_id']);
+                $nomeCompleto = $dados['nome'];
+                $nome = explode(" ", $nomeCompleto)[0];
+            ?>
+
+                <span id="tit1">Notícias - Bem vindo, <?= htmlspecialchars($nome) ?>!</span>
+            <?php endif; ?>
             <hr id="hrT">
             <div class="containerNoticias">
 
