@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config.php';
+require_once 'config/config.php';
 require_once 'classes/Usuario.php';
 
 if (!empty($_SESSION['usuario_id'])) {

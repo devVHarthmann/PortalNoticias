@@ -22,7 +22,7 @@ portal_noticias/
 ├── index.php                 # Página inicial — listagem pública de notícias
 ├── noticia.php               # Leitura individual de uma notícia
 ├── login.php                 # Formulário de login
-├── cadastro.php              # Cadastro de novo usuário
+├── cadastrar.php             # Cadastro de novo usuário
 ├── logout.php                # Encerra a sessão
 │
 ├── dashboard.php             # Painel do usuário logado

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config.php';
+require_once 'config/config.php';
 require_once 'funcoes.php';
 require_once 'classes/Noticia.php';
 require_once 'classes/Usuario.php';
@@ -38,7 +38,7 @@ $ehAutor    = !empty($_SESSION['usuario_id']) && $_SESSION['usuario_id'] == $not
           <a href="logout.php">Sair</a>
         <?php else: ?>
           <a href="login.php">Entrar</a>
-          <a href="cadastro.php" class="btn-nav-accent">Criar conta</a>
+          <a href="cadastrar.php" class="btn-nav-accent">Criar conta</a>
         <?php endif; ?>
       </nav>
     </div>

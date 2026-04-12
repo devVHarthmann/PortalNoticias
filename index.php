@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config.php';
+require_once 'config/config.php';
 require_once 'funcoes.php';
 require_once 'classes/Noticia.php';
 require_once 'classes/Usuario.php';
@@ -90,7 +90,7 @@ unset($n);
           <a href="logout.php">Sair</a>
         <?php else: ?>
           <a href="login.php">Entrar</a>
-          <a href="cadastro.php" class="btn-nav-accent">Criar conta</a>
+          <a href="cadastrar.php" class="btn-nav-accent">Criar conta</a>
         <?php endif; ?>
       </nav>
       </div>
@@ -111,7 +111,7 @@ unset($n);
       <h1>Tecnologia &amp; Inovação<br>em Primeiro Lugar</h1>
       <p>As últimas notícias sobre tecnologia, startups, inteligência artificial e o futuro digital.</p>
       <?php if (empty($_SESSION['usuario_id'])): ?>
-        <a href="cadastro.php" class="btn btn-accent btn-lg">Criar conta grátis</a>
+        <a href="cadastrar.php" class="btn btn-accent btn-lg">Criar conta grátis</a>
       <?php else: ?>
         <a href="nova_noticia.php" class="btn btn-accent btn-lg">+ Publicar Notícia</a>
       <?php endif; ?>
@@ -132,7 +132,7 @@ unset($n);
         <?php if (!empty($_SESSION['usuario_id'])): ?>
           <a href="nova_noticia.php">Seja o primeiro a publicar!</a>
         <?php else: ?>
-          <a href="cadastro.php">Cadastre-se</a> e publique a primeira notícia.
+          <a href="cadastrar.php">Cadastre-se</a> e publique a primeira notícia.
         <?php endif; ?>
       </div>
     <?php else: ?>
@@ -176,7 +176,7 @@ unset($n);
   <div class="container">
     <p><strong>TechPortal</strong> — Tecnologia &amp; Inovação &nbsp;|&nbsp;
        Desenvolvido com PHP &amp; MySQL &nbsp;&nbsp;
-       <a href="login.php">Login</a> &nbsp;·&nbsp; <a href="cadastro.php">Cadastro</a>
+       <a href="login.php">Login</a> &nbsp;·&nbsp; <a href="cadastrar.php">Cadastro</a>
     </p>
   </div>
 </footer>

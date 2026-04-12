@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'verifica_login.php';
-require_once 'config.php';
+require_once 'config/config.php';
 require_once 'funcoes.php';
 require_once 'classes/Noticia.php';
 require_once 'classes/Usuario.php';

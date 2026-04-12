@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config.php';
+require_once 'config/config.php';
 require_once 'classes/Usuario.php';
 
 if (!empty($_SESSION['usuario_id'])) {
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
       </form>
     </div>
-    <p class="auth-footer">Não tem conta? <a href="cadastro.php">Cadastre-se grátis</a></p>
+    <p class="auth-footer">Não tem conta? <a href="cadastrar.php">Cadastre-se grátis</a></p>
     <p class="auth-footer"><a href="index.php">← Voltar ao portal</a></p>
   </div>
 

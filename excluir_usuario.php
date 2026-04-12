@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'verifica_login.php';
-require_once 'config.php';
+require_once 'config/config.php';
 require_once 'classes/Usuario.php';
 
 $ehAdmin = !empty($_SESSION['usuario_admin']);
